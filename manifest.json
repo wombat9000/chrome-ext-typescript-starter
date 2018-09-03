@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "TS extension",
+  "description": "Extension written in TypeScript",
+  "version": "1",
+  "author": "Bastian Stein",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.de/*"
+      ],
+      "js": ["build/dist/main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ]
+}
